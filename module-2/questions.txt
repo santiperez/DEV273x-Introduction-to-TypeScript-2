@@ -1,0 +1,36 @@
+##Mod2 Graded Questions##
+
+1) A protected property in a class can not be accessed from outside the class with the exception of a derived or child class.
+true
+
+2) What is the result of compiling the following code in TypeScript:
+const companyName = "Microsoft";
+companyName = "Microsoft";
+
+The compiler will give an error due to reassignment of a constant variable.
+
+3) Consider the following function in TypeScript:
+
+function multiply(x: number, y: number):number  
+{ 
+	return x * y; 
+}
+
+What is the result of calling the above function as:
+
+multiply ("6",3);
+
+The compiler errors out and code can't be executed until error is fixed.
+
+4) What is the return type of this function
+
+let result = function (x: string, y: boolean, z: null): Array<number> { return [3,56,80]; }
+
+An array of numbers
+
+5) The following declaration would cause the TypeScript compiler to throw an error. Why?
+
+var e: Null;
+
+Null is case sensitive and must be all lower case in TypeScript. 
+

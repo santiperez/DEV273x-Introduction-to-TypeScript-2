@@ -1,0 +1,18 @@
+
+##Mod1 Graded Questions##
+
+1) Unlike JavaScript, TypeScript is used to create both ------- and ------- applications (choose two answers)
+Client-side
+Server-side
+
+2) TypeScript is a subset of JavaScript
+True
+
+3) What is the most important feature in TypeScript
+Types
+
+4) What does this command do npm install -g typescript?
+installs the TypeScript compiler on the machine
+
+5) JavaScript code is considered valid TypeScript while TypeScript code is not JavaScript
+True
