@@ -1,0 +1,91 @@
+##Mod2 Graded Questions##
+
+1) Question 8
+You have downloaded sample code that includes a .ts file with the interfaces below. You want to create a class that implements the IAddress interface.
+
+interface IStreet{
+	streetName: string;
+}
+
+interface ICity extends IStreet{
+	cityName: string;
+}
+
+interface IAddress extends ICity{
+	postalCode: number;
+	countryCode?: string; 
+}
+
+Which member variables must your class include to avoid a compiler error?
+
+streetName, cityName, and postalCode correct
+
+
+2) Question 4
+
+You have been writing a program in TypeScript and decided to download a set of classes from a code repository on the internet. You notice that some of the names of the classes are identical to names you used for your classes.
+
+If you don't use modules to organize your code, which class will be used when you try to instantiate a class that has the same name as another class in the global scope?
+
+The class that is included in the file that is loaded last.
+
+
+3) Question 5
+
+You have written a set of classes and interfaces and organized some of them by placing them in groups into modules. You have the following module/class structure:
+
+module Geography {
+
+	interface IRanges{}
+	
+	class Mountains implements IRanges{}
+	
+	class WashingtonMountains <T extends IRanges>{
+		mountains: T[] = [];		
+	}	
+}
+
+module Population{
+	class PopulationByRegion{}
+	
+	class Nationality{}
+}
+
+class Lookup{
+	static COUNTRY_CODE_REQUIRED: boolean = true;
+	static GEOGRAPHY_CODE_REQUIRED: boolean = false;
+}
+
+Given the above organization, which of the following is true? (choose two)
+
+The IRanges interface is accessible by the Mountains and WashingtonMountains classes only
+The Lookup class is accessible by all other classes
+
+
+4) Question 6
+You are responsible for doing a technical review of the code written by another member of your team. In your review, you notice that there are many reference to objects that reside in exported modules within other modules. You are going to recommend to your team member that she alias her modules.
+
+What keyword should your team member use when she creates aliases for her modules?
+
+import
+
+
+5) Question 9
+
+Your co-worker sent you a code sample explaining that the variable address is typed as an interface but he forgot to send the interface definition for the function type. You need to write the interface to prevent a compiler error.
+
+var address: StreetFunc = function(street: string, city: string) {
+	if ((street = "Redmond Way") && (city = "Redmond")){
+		return 98052;
+	}
+	else {
+		return null;
+	}
+}
+alert(address("Redmond Way", "Redmond"))
+Which of the following code blocks should you write?
+
+interface StreetFunc{
+	(street: string, city: string): number;
+}
+
